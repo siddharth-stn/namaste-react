@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LogoImg from "../assets/images/logoFood.png";
 
 export default Header = () => {

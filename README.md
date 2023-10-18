@@ -94,6 +94,10 @@
 - Ans:- They are normal JavaScript funtions.
 - Two most important hooks are useState() and useEffect().
 
+* never use useState() inside an if and if - else block.
+* never use useState() inside a function.
+* never use useState() inside a for loop.
+
 * Whenever a state variable changes react will update that component
 
 * Q How react works behind the scene while updating the DOM?
@@ -134,3 +138,22 @@
 - Ans:- UI does not re render when a normal variable is changed that is why normal variable do not work to update the DOM.
 
 * Whenever state variable changes, react triggers a reconciliation cycle(re-renders the component)
+
+* Q When is useEffect() called in the app?
+
+- Ans- it is called after every render of that component, but you can change this behaviour by using the dependency array.
+- if the dependency array is empty [] => useEffect() will be called on the initial render only.
+- if the dependency array has an element => useEffect() will be called everytime that dependency changes an on the initial render.
+
+* React Routes:-
+
+- Reacct routes are created by doing configuration in the root level of the app.
+- configuration will be done by using a library called createBrowserRouter.
+- a react package known as react-router-dom is installed from which createbrowserRouter is imported to the root level of the application.
+- configuration is passed as an argument(in the form of an Array) to the createBrowserRouter() function.
+- configuration is that information that tells the browserRouter what to do when a specific route(path) is called.
+- this created configuration must be passed to be rendered on to the page, for which another library is imported from the react-router-dom known as RouterProvider.
+- This RouterProvider is a component in which we pass a prop named as
+  router={ROUTES_CONFIGURATION_ARRAY}.
+- This <RouterProvider router={ROUTES_CONFIGURATION_ARRAY}> is then passed to the root level in the root.render() function.
+- react-router-dom gives us an access to an important hook for showing the error page, this hook is called useRouteError.

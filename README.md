@@ -166,3 +166,10 @@
 * Never use anchor tag to link in react as the whole page gets refreshed.
   - better to use link component library to do this work, from react-router-dom.
   - this process is called client side routing. and these type of applications are called spa's (single page applications)
+
+# Dynamic Routing
+
+- api call will be made.
+
+* useParams() hook to extract parameters from the query
+  - import useParams() from react-router-dom

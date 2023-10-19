@@ -157,3 +157,12 @@
   router={ROUTES_CONFIGURATION_ARRAY}.
 - This <RouterProvider router={ROUTES_CONFIGURATION_ARRAY}> is then passed to the root level in the root.render() function.
 - react-router-dom gives us an access to an important hook for showing the error page, this hook is called useRouteError.
+
+* Children Routes is a list of routes inside a route.
+
+  - next put the conditions in the app element to show the route according to the condition.
+  - next import Outlet and use in the app element to show the different routes that are queried.
+
+* Never use anchor tag to link in react as the whole page gets refreshed.
+  - better to use link component library to do this work, from react-router-dom.
+  - this process is called client side routing. and these type of applications are called spa's (single page applications)

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LogoImg from "../assets/images/logoFood.png";
 import { Link } from "react-router-dom";
 export default Header = () => {

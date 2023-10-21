@@ -144,6 +144,7 @@
 - Ans- it is called after every render of that component, but you can change this behaviour by using the dependency array.
 - if the dependency array is empty [] => useEffect() will be called on the initial render only.
 - if the dependency array has an element => useEffect() will be called everytime that dependency changes an on the initial render.
+- useEffect() will not cause a re-render of the component, while setState() causes a re render of the component.
 
 * React Routes:-
 
@@ -183,3 +184,24 @@
 * if you want to create more than one state variable in class based components:
 
 - create as many state variables as you need in the this.state = {} object only
+
+# Lifecycle of a react component
+
+- componentdidmount() {
+
+}
+
+- Q Why api call is made in the componentDidMount() method.
+
+* Ans. comoponentDidMount is similar to useEffect() hook in functional components, calling api in this method is
+* important as the api call is an asynchronous method and takes some time to get the data and componentDidMount(){}
+* will allow to render the component first without waiting for the api call to complete and the component will fill with
+* the data after it is fetched by the api call in the componentDidMount(){} or useEffect() methods.
+
+* Q When is componentDidUpdate() {} methods called?
+* Ans: componentDidUpdate(){} method is called by react after the setState() is called which causes render phase to start again.
+* React will call this componentDidUpdate(){} method whether user defines it in the code or not.
+
+* Q What is the componentnWillUnmount(){} method?
+* Ans: The componentWillUnmount(){} will be called by react (whether the user defines it in the code or not) just before a component is
+* removed from the DOM.

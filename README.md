@@ -172,4 +172,14 @@
 - api call will be made.
 
 * useParams() hook to extract parameters from the query
+
   - import useParams() from react-router-dom
+
+# Creating declaring state variable in class based components
+
+- State is created whenever an instance of class is created.
+- State variable is created inside the constructor of the class.
+
+* if you want to create more than one state variable in class based components:
+
+- create as many state variables as you need in the this.state = {} object only

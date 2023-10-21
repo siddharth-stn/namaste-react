@@ -193,7 +193,8 @@
 
 - Q Why api call is made in the componentDidMount() method.
 
-* Ans. comoponentDidMount is similar to useEffect() hook in functional components, calling api in this method is
+* Ans. comoponentDidMount is **not exactly similar to useEffect() hook(and not using lifecycle methods behined the scene)**
+* in functional components, calling api in this method is
 * important as the api call is an asynchronous method and takes some time to get the data and componentDidMount(){}
 * will allow to render the component first without waiting for the api call to complete and the component will fill with
 * the data after it is fetched by the api call in the componentDidMount(){} or useEffect() methods.
@@ -205,3 +206,5 @@
 * Q What is the componentnWillUnmount(){} method?
 * Ans: The componentWillUnmount(){} will be called by react (whether the user defines it in the code or not) just before a component is
 * removed from the DOM.
+
+* ##Never compare lifecycle methods to useEffect().##

@@ -221,3 +221,13 @@
 * They are nothing but javscript funtions(helper functions or utility functions) at the end of the day.
 * Makes the code more readable/modular/reusable.
 * separate file for each custom hook.
+
+- By making smaller bundles of files known as
+
+* chunking
+* code splitting
+* dynamic bundling
+* on demand loading
+
+* using **lazy loading** a.k.a **on demand loading** to make smaller chunks of the code
+* use of the **Suspense** Component to clear the hung up due to lazy loading.

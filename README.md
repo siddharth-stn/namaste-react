@@ -207,4 +207,17 @@
 * Ans: The componentWillUnmount(){} will be called by react (whether the user defines it in the code or not) just before a component is
 * removed from the DOM.
 
-* ##Never compare lifecycle methods to useEffect().##
+* **Never compare lifecycle methods to useEffect().**
+
+# Optimising the React App
+
+- Single responsibility principle.
+
+* Each component is a different function and should do only one thing at a time.
+* It helps to write better test case for individual moudules/components/functions.
+
+- Concept of custom Hooks
+
+* They are nothing but javscript funtions(helper functions or utility functions) at the end of the day.
+* Makes the code more readable/modular/reusable.
+* separate file for each custom hook.

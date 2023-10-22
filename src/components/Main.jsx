@@ -2,11 +2,11 @@ import ResCard from "./ResCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useGetRestaurantList from "../utils/useGetRestaurantList";
 
 const Main = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
-
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const { listOfRestaurants, filteredRestaurants, setFilteredRestaurants } =
+    useGetRestaurantList();
 
   const [searchText, setSearchText] = useState("");
 
@@ -15,27 +15,6 @@ const Main = () => {
       (restaurant) => restaurant.info.avgRating >= 4
     );
     setFilteredRestaurants(filteredArr);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-
-    const jsonData = await data.json();
-    //Optional Chaining in javaScript
-    setListOfRestaurants(
-      jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
-    setFilteredRestaurants(
-      jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
   };
 
   return filteredRestaurants.length === 0 ? (

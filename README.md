@@ -231,3 +231,13 @@
 
 * using **lazy loading** a.k.a **on demand loading** to make smaller chunks of the code
 * use of the **Suspense** Component to clear the hung up due to lazy loading.
+
+# Styling and beautifying your application
+
+- Material UI is extensively used in the industry.
+- Bootstrap is used in the industry by many companies.
+- Chakra UI is also used in the industry.
+- There is one ant design and they claim to be second most popular designing library.
+- Styled Components are also used.
+
+* But we are going to learn styling of the components using **TAILWIND CSS** (latest and trending)

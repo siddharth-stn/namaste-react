@@ -9,29 +9,49 @@ export default Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between items-center bg-pink-200 shadow-lg mb-2">
       <div className="logo-container">
-        <img className="logo" src={LogoImg} />
+        <img className="w-56" src={LogoImg} />
       </div>
-      <div>Network Status: {onlineStatus ? "🟢" : "🔴"}</div>
-      <div className="navItems">
-        <ul>
+      <div className="flex gap-1 items-center font-bold text-red-500 bg-red-500 text-white shadow-lg p-4 ml-4 my-4 rounded">
+        <p className="whitespace-nowrap">Network Status:</p>
+        <p> {onlineStatus ? "🟢" : "🔴"}</p>
+      </div>
+      <div>
+        <ul className="flex items-center gap-3 p-4">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="font-bold text-red-500 hover:text-red-800">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link
+              to="/about"
+              className="font-bold text-red-500 hover:text-red-800 whitespace-nowrap"
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              className="font-bold text-red-500 hover:text-red-800"
+            >
+              Contact
+            </Link>
           </li>
           <li>
-            <Link to="/grocery">Grocery</Link>
+            <Link
+              to="/grocery"
+              className="font-bold text-red-500 hover:text-red-800"
+            >
+              Grocery
+            </Link>
           </li>
           <li>Cart</li>
           <li>
             <button
-              className="login-btn"
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
               onClick={() =>
                 btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
               }

@@ -75,10 +75,11 @@ const Main = () => {
               key={restaurant.info.id}
               to={"restaurants/" + restaurant.info.id}
             >
-              {/* if a restaurant has a prometed label on it then attach a promoted label to the card */}
-              {/* restaurant.data.promoted ? <RestaurantCardPromoted /> : */}
-              {/* <ResCard resData={restaurant} /> */}
-              <RestaurantCardPromoted resData={restaurant} />
+              {restaurant.info.hasOwnProperty("promoted") ? (
+                <RestaurantCardPromoted resData={restaurant} />
+              ) : (
+                <ResCard resData={restaurant} />
+              )}
             </Link>
           );
         })}

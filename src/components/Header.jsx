@@ -9,9 +9,9 @@ export default Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between items-center bg-pink-200 shadow-lg mb-2">
-      <div className="logo-container">
-        <img className="w-56" src={LogoImg} />
+    <div className="flex justify-between items-center bg-pink-200 shadow-lg mb-2 overflow-auto">
+      <div className="">
+        <img className="" src={LogoImg} />
       </div>
       <div className="flex gap-1 items-center font-bold text-red-500 bg-red-500 text-white shadow-lg p-4 ml-4 my-4 rounded">
         <p className="whitespace-nowrap">Network Status:</p>

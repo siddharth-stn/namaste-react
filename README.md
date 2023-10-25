@@ -241,3 +241,8 @@
 - Styled Components are also used.
 
 * But we are going to learn styling of the components using **TAILWIND CSS** (latest and trending)
+
+# Higher Order Component
+
+- It is a function that takes in a component and returns a component.
+- It takes in a component and enhances its feature and returns it.

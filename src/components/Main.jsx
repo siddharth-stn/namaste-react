@@ -1,4 +1,4 @@
-import ResCard from "./ResCard";
+import ResCard, { withPromotedLabel } from "./ResCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -10,6 +10,8 @@ const Main = () => {
     useGetRestaurantList();
 
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(ResCard);
 
   const findBestRestaurants = () => {
     let filteredArr = filteredRestaurants.filter(
@@ -73,7 +75,10 @@ const Main = () => {
               key={restaurant.info.id}
               to={"restaurants/" + restaurant.info.id}
             >
-              <ResCard resData={restaurant} />
+              {/* if a restaurant has a prometed label on it then attach a promoted label to the card */}
+              {/* restaurant.data.promoted ? <RestaurantCardPromoted /> : */}
+              {/* <ResCard resData={restaurant} /> */}
+              <RestaurantCardPromoted resData={restaurant} />
             </Link>
           );
         })}

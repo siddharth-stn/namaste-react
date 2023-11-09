@@ -1,5 +1,5 @@
 import ResCard, { withPromotedLabel } from "./ResCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useGetRestaurantList from "../utils/useGetRestaurantList";

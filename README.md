@@ -245,4 +245,7 @@
 # Higher Order Component
 
 - It is a function that takes in a component and returns a component.
-- It takes in a component and enhances its feature and returns it.
+- It takes in a component and enhances its feature and returns a new component.
+
+** All the react applications have two layers UI layer and Data layer
+** If you learn to manage the data layer (props, state, local variable) then your application becomes very fast

@@ -25,23 +25,24 @@ const RestaurantMenu = () => {
     });
 
   return (
-    <div className="flex flex-col items-center pt-10">
+    <div className="flex flex-col pt-10 w-[300px] mx-auto gap-5">
       <div className="w-48">
         <img src={CDN_URL + cloudinaryImageId} alt="" />
       </div>
       <div>
-        <h1>{name}</h1>
-        <h3>Cuisines</h3>
-        <ul>
-          {cuisines.map((cuisine, num) => (
-            <li key={num}>{cuisine}</li>
-          ))}
-        </ul>
-        <h2>{costForTwoMessage}</h2>
+        <h1 className="font-bold">{name}</h1>
+        <div>
+          <h3 className="font-bold">Cuisines:</h3>
+          <h3 className="pl-2">{cuisines.join(", ")}</h3>
+        </div>
+
+        <h2 className="font-bold">{costForTwoMessage}</h2>
       </div>
-      {categories.map((cat, index) => {
-        return <RestaurantCategory key={index} />;
-      })}
+      <div>
+        {categories.map((cat, index) => {
+          return <RestaurantCategory key={index} data={cat.card.card} />;
+        })}
+      </div>
     </div>
   );
 };

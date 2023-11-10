@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import { CDN_URL } from "../utils/constants";
 import useGetRestaurantMenu from "../utils/useGetRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -19,11 +20,10 @@ const RestaurantMenu = () => {
     resInfo.cards[2].groupedCard.cardGroupMap.REGULAR.cards.filter((cat) => {
       return (
         cat?.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+        "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
       );
     });
 
-  console.log(categories);
   return (
     <div className="flex flex-col items-center pt-10">
       <div className="w-48">
@@ -39,6 +39,9 @@ const RestaurantMenu = () => {
         </ul>
         <h2>{costForTwoMessage}</h2>
       </div>
+      {categories.map((cat, index) => {
+        return <RestaurantCategory key={index} />;
+      })}
     </div>
   );
 };

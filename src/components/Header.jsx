@@ -16,7 +16,7 @@ export default Header = () => {
       <div className="">
         <img className="" src={LogoImg} />
       </div>
-      <div className="flex gap-1 items-center font-bold text-red-500 bg-red-500 text-white shadow-lg p-4 ml-4 my-4 rounded">
+      <div className="flex gap-1 items-center font-bold bg-red-500 text-white shadow-lg p-4 ml-4 my-4 rounded">
         <p className="whitespace-nowrap">Network Status:</p>
         <p> {onlineStatus ? "🟢" : "🔴"}</p>
       </div>

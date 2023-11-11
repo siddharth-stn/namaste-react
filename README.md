@@ -259,4 +259,4 @@
 
 - React context api is used to avoid props drilling.
 - is kind of a global place where data is kept and all components have access to this.
-- logged in user is one example to be stored in this place
+- logged in user, theme, language are examples to be stored in this place.

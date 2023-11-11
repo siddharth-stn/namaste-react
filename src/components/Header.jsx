@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import LogoImg from "../assets/images/logoFood.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 export default Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
+
+  const userNameData = useContext(UserContext);
 
   return (
     <div className="flex justify-between items-center bg-pink-200 shadow-lg mb-2 overflow-auto">
@@ -59,6 +62,7 @@ export default Header = () => {
               {btnName}
             </button>
           </li>
+          <li className="p-2 font-bold">{userNameData.loggedInUser}</li>
         </ul>
       </div>
     </div>

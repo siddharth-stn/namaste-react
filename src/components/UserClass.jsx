@@ -1,4 +1,6 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
+
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +26,11 @@ class UserClass extends React.Component {
       <div className="user-card">
         <img src={this.state.userData.avatar_url} alt="avatar" />
         <h2>Name: {this.state.userData.name}</h2>
+        <div>
+          <UserContext.Consumer>
+            {({ loggedInUser }) => <h2>{loggedInUser}</h2>}
+          </UserContext.Consumer>
+        </div>
       </div>
     );
   }

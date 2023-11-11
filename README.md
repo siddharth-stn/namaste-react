@@ -249,3 +249,14 @@
 
 ** All the react applications have two layers UI layer and Data layer
 ** If you learn to manage the data layer (props, state, local variable) then your application becomes very fast
+
+# Props Drilling
+
+- In react data passes from parent to children.
+- Passing data from parent to its child and then child to its child is called props drilling.
+
+# Context API
+
+- React context api is used to avoid props drilling.
+- is kind of a global place where data is kept and all components have access to this.
+- logged in user is one example to be stored in this place

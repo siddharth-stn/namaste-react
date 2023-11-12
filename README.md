@@ -260,3 +260,15 @@
 - React context api is used to avoid props drilling.
 - is kind of a global place where data is kept and all components have access to this.
 - logged in user, theme, language are examples to be stored in this place.
+
+# Redux
+
+- Redux is not mandatory.
+- When lot of read and write applications are there in the app then redux is used.
+- Use redux wisely and only when requied.
+- zustand is another library alternative of redux.
+- Redux makes it easier to debug our application.
+- A predictable State Container for JS Apps.
+- Two libraries from redux:- React-Redux and Redux Toolkit.
+- Redux Toolkit is also known as RTK.
+- Redux store is central place and any component can access it. It is a like a very big Object in JS.

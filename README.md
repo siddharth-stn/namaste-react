@@ -272,3 +272,34 @@
 - Two libraries from redux:- React-Redux and Redux Toolkit.
 - Redux Toolkit is also known as RTK.
 - Redux store is central place and any component can access it. It is a like a very big Object in JS.
+
+
+# Redux-Toolkit
+- Intall redux-toolkit using npm -i @redux/toolkit
+- Install redux-react using npm -i react-redux
+- Build Store
+- Connect Store to App
+- Create slice(cart slice for this App)
+- dispatch (action)
+- read data (selector)
+
+* Build Store named appStore in utils directory by using configureStore() method 
+-- imported from the "redux-toolkit" as import {sonfigureStore} from "redux-toolkit",
+-- and export default appStore
+
+* Connect the store to App using "Provider".
+-- import {Provider} from "react-redux"
+-- now import the created store file from utils to App.js
+-- now wrap your root component with <Provider store={<name_of_store} /> 
+
+* Creating a slice 
+- create another file in utils named as cartSlice
+- in this file import {createSlice} from "redux-toolkit"
+- now const cartSlice = createSlice()
+
+
+
+
+
+
+

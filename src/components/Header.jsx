@@ -3,6 +3,7 @@ import LogoImg from "../assets/images/logoFood.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import useCartStore from "../utils/useCartStore";
 
 export default Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -10,6 +11,8 @@ export default Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const userNameData = useContext(UserContext);
+
+  const cartItems = useCartStore((state) => state.items);
 
   return (
     <div className="flex justify-between items-center bg-pink-200 shadow-lg mb-2 overflow-auto">
@@ -51,7 +54,9 @@ export default Header = () => {
               Grocery
             </Link>
           </li>
-          <li>Cart</li>
+          <Link to={"/cart"}>
+            <li>Cart - {cartItems.length}</li>
+          </Link>
           <li>
             <button
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"

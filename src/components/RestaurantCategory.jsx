@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory = (props) => {
@@ -18,7 +17,7 @@ const RestaurantCategory = (props) => {
           <span className="font-bold text-lg">
             {data.title} ({data.categories.length})
           </span>
-          <span>🔽</span>
+          <span className="pl-2">🔽</span>
         </div>
 
         {showItems && <ItemList items={data.categories} />}

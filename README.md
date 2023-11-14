@@ -273,8 +273,8 @@
 - Redux Toolkit is also known as RTK.
 - Redux store is central place and any component can access it. It is a like a very big Object in JS.
 
-
 # Redux-Toolkit
+
 - Intall redux-toolkit using npm -i @redux/toolkit
 - Install redux-react using npm -i react-redux
 - Build Store
@@ -283,40 +283,54 @@
 - dispatch (action)
 - read data (selector)
 
-* Build Store named appStore in utils directory by using configureStore() method 
--- imported from the "redux-toolkit" as import {sonfigureStore} from "redux-toolkit",
--- and export default appStore
+* Build Store named appStore in utils directory by using configureStore() method
+  -- imported from the "redux-toolkit" as import {sonfigureStore} from "redux-toolkit",
+  -- and export default appStore
 
 * Connect the store to App using "Provider".
--- import {Provider} from "react-redux"
--- now import the created store file from utils to App.js
--- now wrap your root component with <Provider store={<name_of_store} /> 
+  -- import {Provider} from "react-redux"
+  -- now import the created store file from utils to App.js
+  -- now wrap your root component with <Provider store={<name_of_store} />
 
-* Creating a slice 
+* Creating a slice
+
 - create another file in utils named as cartSlice
 - in this file import {createSlice} from "redux-toolkit"
 - now const cartSlice = createSlice()
 
-
 # Testing Code - Types of Testing (developer)
+
 - Unit Testing
 - Integration Testing
 - End to End Testing - e2e Testing
 
 # Unit Testing
+
 - eg:- Testing one specific component in react can be a Unit Testing.
 
 # Integration Testing
+
 - Testing the integration of two or more components together that
- -- collaborating with each other.
+  -- collaborating with each other.
 
 # End to End Testing - e2e Testing
-- Testing the whole application with landing on the page to 
- -- the complete flow of the application.
+
+- Testing the whole application with landing on the page to
+  -- the complete flow of the application.
 - Tools such as cyprus are needed to do this kind of testing
 
+# React-Testing-Library
 
+- It uses Dom-Testing-Library and Jest behined the scenes.
+- Jest uses Babel.
 
+# Setting up Testing
 
-
-
+- Install React-Testing-Library as Dev Dependency
+- Install Jest as Dev Dependency
+- Install Babel dependency
+- Config Babel by adding babel.config.js and add the code from the jest website
+- Our babel.config.js file will conflict with parcels babel config
+  -- thus parcel config will need to be edited to accomodate jest babel config.
+- Configure .parcelrc file to disable default babel transpilation given by parcel.
+  -- this file can be copied from parcel's website Javascript section - Babel - usage with other tools.

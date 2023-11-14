@@ -298,6 +298,23 @@
 - now const cartSlice = createSlice()
 
 
+# Testing Code - Types of Testing (developer)
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e Testing
+
+# Unit Testing
+- eg:- Testing one specific component in react can be a Unit Testing.
+
+# Integration Testing
+- Testing the integration of two or more components together that
+ -- collaborating with each other.
+
+# End to End Testing - e2e Testing
+- Testing the whole application with landing on the page to 
+ -- the complete flow of the application.
+- Tools such as cyprus are needed to do this kind of testing
+
 
 
 

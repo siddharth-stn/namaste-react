@@ -336,6 +336,6 @@
   -- this file can be copied from parcel's website Javascript section - Babel - usage with other tools.
 - Jest Configuration - npx jest --init
 - Install JSDom library
-- Install Babel preset for jsx in test "@babel-preset/react"
+- Install Babel preset for jsx in test "@babel/preset-react" to make jsx run in jest
   -- Add this preset to the babel.config.js
 - Install @testing-library/jest-dom

@@ -334,3 +334,8 @@
   -- thus parcel config will need to be edited to accomodate jest babel config.
 - Configure .parcelrc file to disable default babel transpilation given by parcel.
   -- this file can be copied from parcel's website Javascript section - Babel - usage with other tools.
+- Jest Configuration - npx jest --init
+- Install JSDom library
+- Install Babel preset for jsx in test "@babel-preset/react"
+  -- Add this preset to the babel.config.js
+- Install @testing-library/jest-dom

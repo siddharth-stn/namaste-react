@@ -6,6 +6,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest",
+    "watch-test": "jest --watch",
     "comadush": "git add . && git commit -m \"added code successfully\" && git push "
   },
   "repository": {

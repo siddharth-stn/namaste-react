@@ -347,3 +347,23 @@
   -- make a file having the mock data which will be used in place of props when rendering the component
   -- now check for presence of some part of the mock data using screen.getByText() method
   -- in conjunction with expect().toBeInTheDocument() method.
+- Integration Testing
+  -- to test a component using fetch function you have to make a mock fetch funtion
+  -- global.fetch = jest.fn(() => {
+  -- -- return Promise.resolve({
+  -- -- -- json: () => {
+  -- -- -- -- return Promise.resolve(MockData);
+  -- -- -- },
+  -- -- });
+  -- });
+  --
+  -- The components with state manangement must use and act function --import { act } from "react-dom/test-utils"--
+  -- eg:-
+  -- it("should render the Main component with search button", async () => {
+  -- -- await act(async () => {
+  -- -- -- render(
+  -- -- -- -- <MemoryRouter>
+  -- -- -- -- -- <Main />
+  -- -- -- -- </MemoryRouter>
+  -- -- -- );
+  -- });

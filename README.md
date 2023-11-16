@@ -341,3 +341,5 @@
 - Install @testing-library/jest-dom
 - The Components using the Link method must be wrapped with <MemoryRouter></MemoryRouter> after importing
   -- it from the react-router-dom. eg: render(<MemoryRouter><Header/></MemoryRouter> )
+- Import fireEvent from "@testing-library/react" to simulate an event like onClick.
+- ## How to test when a component is passing props in it

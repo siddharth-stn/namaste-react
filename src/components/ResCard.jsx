@@ -10,7 +10,10 @@ const ResCard = (props) => {
   const { loggedInUser } = useContext(UserContext);
 
   return (
-    <div className="p-2 w-[250px] min-h-full rounded-t bg-gray-200 hover:bg-slate-600 hover:text-white">
+    <div
+      data-testid="resCard"
+      className="p-2 w-[250px] min-h-full rounded-t bg-gray-200 hover:bg-slate-600 hover:text-white"
+    >
       <img
         className="rounded-t"
         alt="res-logo"

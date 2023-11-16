@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Main from "../Main";
 import { act } from "react-dom/test-utils";
 import MockData from "../../../__mocks__/mockResListData.json";
@@ -14,7 +14,7 @@ global.fetch = jest.fn(() => {
   });
 });
 
-it("should render the Main component with search button", async () => {
+it("should render ", async () => {
   await act(async () => {
     render(
       <MemoryRouter>
@@ -25,5 +25,13 @@ it("should render the Main component with search button", async () => {
 
   const searchButton = screen.getByRole("button", { name: "Search" });
 
-  expect(searchButton).toBeInTheDocument();
+  const searchInput = screen.getByTestId("searchInput");
+
+  fireEvent.change(searchInput, { target: { value: "hut" } });
+
+  fireEvent.click(searchButton);
+
+  const card = screen.getAllByTestId("resCard");
+
+  expect(card.length).toBe(1);
 });

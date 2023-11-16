@@ -35,6 +35,7 @@ const Main = () => {
         <div className="flex items-center">
           <input
             type="text"
+            data-testid="searchInput"
             className="m-1 mx-4 p-1 outline outline-1 rounded"
             value={searchText}
             onChange={(e) => {

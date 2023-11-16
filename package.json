@@ -6,7 +6,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest",
-    "comad": "git add . && git commit -m \"added code successfully\" "
+    "comad": "git add . && git commit -m \"added code successfully\" && git push "
   },
   "repository": {
     "type": "git",

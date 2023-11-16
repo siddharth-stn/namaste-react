@@ -342,4 +342,8 @@
 - The Components using the Link method must be wrapped with <MemoryRouter></MemoryRouter> after importing
   -- it from the react-router-dom. eg: render(<MemoryRouter><Header/></MemoryRouter> )
 - Import fireEvent from "@testing-library/react" to simulate an event like onClick.
-- ## How to test when a component is passing props in it
+- How to test when a component is passing props in it
+  -- make a directory in the root of the project,
+  -- make a file having the mock data which will be used in place of props when rendering the component
+  -- now check for presence of some part of the mock data using screen.getByText() method
+  -- in conjunction with expect().toBeInTheDocument() method.

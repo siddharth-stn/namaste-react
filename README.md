@@ -337,7 +337,7 @@
 - Jest Configuration - npx jest --init
 - Install JSDom library
 - Install Babel preset for jsx in test "@babel/preset-react" to make jsx run in jest
-  -- Add this preset to the babel.config.js - ["@babel/preset-react"]
+  -- Add this preset to the babel.config.js in the preset- ["@babel/preset-react", {runtime: "automatic"}]
 - Install @testing-library/jest-dom
 - The Components using the Link method must be wrapped with <MemoryRouter></MemoryRouter> after importing
   -- it from the react-router-dom. eg: render(<MemoryRouter><Header/></MemoryRouter> )

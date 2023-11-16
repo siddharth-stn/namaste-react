@@ -9,4 +9,4 @@ it("Should render ResCard component with props Data", () => {
   expect(name).toBeInTheDocument();
 });
 
-it("Should render ResCard component with promoted Label");
+it("Should render ResCard component with promoted Label", () => {});

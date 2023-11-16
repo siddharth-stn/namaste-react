@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import LogoImg from "../assets/images/logoFood.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-// import UserContext from "../utils/UserContext";
+import UserContext from "../utils/UserContext";
 import useCartStore from "../utils/useCartStore";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  // const userNameData = useContext(UserContext);
+  const userNameData = useContext(UserContext);
 
   const cartItems = useCartStore((state) => state.items);
 
@@ -67,7 +67,7 @@ const Header = () => {
               {btnName}
             </button>
           </li>
-          {/* <li className="p-2 font-bold">{userNameData.loggedInUser}</li> */}
+          <li className="p-2 font-bold">{userNameData.loggedInUser}</li>
         </ul>
       </div>
     </div>

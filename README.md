@@ -337,5 +337,5 @@
 - Jest Configuration - npx jest --init
 - Install JSDom library
 - Install Babel preset for jsx in test "@babel/preset-react" to make jsx run in jest
-  -- Add this preset to the babel.config.js
+  -- Add this preset to the babel.config.js - ["@babel/preset-react"]
 - Install @testing-library/jest-dom
